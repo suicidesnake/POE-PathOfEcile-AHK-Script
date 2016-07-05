@@ -17,13 +17,13 @@ UrlDownloadToFile, http://lutbot.com/ahk/readme.txt, readme.txt
 }
 
 F4::logoutCommand()
-`::oosCommand("/oos")
+`::keyOut("/oos")
 !WheelUp::vaal()
 XButton1::flask()
-F2::remaining("/remaining")
-F3::hideout("/hideout")
-!F1::afk("/afk")
-!F2::dnd("/dnd")
+F2::keyOut("/remaining")
+F3::keyOut("/hideout")
+!F1::keyOut("/afk")
+!F2::keyOut("/dnd")
 #IfWinExist Path of Exile
 F12::Pause
 #IfWinNotExist Path of Exile
@@ -31,26 +31,6 @@ F12::ExitApp
 
 logoutCommand(){
 	Run cports.exe /close * * * * PathOfExile.exe
-}
-
-afk(String){
-	keyout(String)
-}
-
-dnd(String){
-	keyout(String)
-}
- 
-remaining(String){
-	keyout(String)
-}
- 
-hideout(String){
-	keyout(String)
-}
-
-oosCommand(String){
-	keyOut(String)
 }
 
 flask(){
